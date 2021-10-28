@@ -1,7 +1,10 @@
 <?php
 
-class Bird {
+class Bird extends DatabaseObject {
+  static protected $table_name = 'birds';
+  static protected $db_columns =['id', 'common_name', 'habitat', 'food', 'nest_placement', 'behavior', 'conservation_id', 'backyard_tips'];
 
+  public $id;
   public $common_name;
   public $habitat;
   public $food;
